@@ -38,6 +38,7 @@ a {
   display: inline-block;
   text-decoration: none;
   color: var(--white);
+  transition: all 0.5s ease-in-out;
 }
 
 a:hover {
@@ -51,8 +52,12 @@ img {
 }
 
 .rounded-corners {
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
+}
+
+.box-shadow {
+  box-shadow: 0px 15px 15px 15px hsla(0, 0%, 0%, 0.2);
 }
 
 .mb-1 {
@@ -80,6 +85,7 @@ img {
   height: 100%;
   inset: 0;
   z-index: 90;
+  transition: all 0.5s ease-in-out;
 }
 
 .image:hover::before {
@@ -95,10 +101,13 @@ img {
   inset: 0;
   z-index: 999;
   cursor: pointer;
+  background: no-repeat center center / auto url("/images/icon-view.svg");
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .image:hover::after {
-  background: no-repeat center center / auto url("/images/icon-view.svg");
+  opacity: 1;
 }
 
 h1 {
